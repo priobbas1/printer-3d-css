@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+div.container {
+  height: 800px;
+  width: 800px;
+  background-color: rgba(255, 255, 255, 0.215);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(800px - 60px);
+  width: 800px;
+  box-shadow: inset 0px 0px 0px 60px rgb(104, 104, 104);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(199, 199, 199, 1) 100%
+  );
+}
+
+div.clamp-container {
+  display: flex;
+  justify-content: space-between;
+}
+div.crystal {
+  height: calc(800px - 60px - 60px - 60px);
+  width: calc(800px - 60px - 60px);
+  --light-color: #5858583f;
+  --dark-color: #4a4a4a22;
+  background: #278ccb89;
+  background: linear-gradient(
+    232deg,
+    var(--dark-color) 0 29.5%,
+    var(--light-color) 30% 34.5%,
+    var(--dark-color) 35% 39.5%,
+    var(--light-color) 40% 70.5%,
+    var(--dark-color) 71% 100%
+  );
+}
+
+.x-axis-container {
+  height: 80px;
+  width: 480px;
+  translate: 160px -740px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.support-x-axis {
+  width: 140px;
+  background-color: #99b5c4;
+}
+
+.x-final-stroke-container {
+  height: 100px;
+  width: 400px;
+  translate: 200px -740px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.x-axis {
+  background-color: #ababab;
+  width: 400px;
+  height: 20px;
+}
+
+.final-stroke-x-axis {
+  height: 100px;
+  width: 60px;
+  background-color: #808080;
+}
+
+div.clamp {
+  height: 60px;
+  width: 80px;
+  clip-path: polygon(0 0, 80% 0%, 30% 100%, 0% 100%);
+  background-color: rgb(104, 104, 104);
+}
+div.clamp:nth-child(2) {
+  transform: scaleX(-1);
+}
+
+.extruder-container {
+  height: 240px;
+  width: 120px;
+  translate: 340px -830px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.extruder-motor {
+  height: 80px;
+  width: 120px;
+  background-color: rgb(104, 104, 104);
+}
+
+.extruder {
+  height: 80px;
+  width: 60px;
+  background-color: rgb(121, 121, 121);
+}
+
+.extruder-hot-end {
+  height: 40px;
+  width: 20px;
+  background-color: rgb(121, 121, 121);
+}
+
+.heated-bed-container {
+  height: 240px;
+  width: 240px;
+  translate: 280px -700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heated-bed {
+  height: 80px;
+  width: 500px;
+  background-color: rgb(133, 133, 133);
+}
+
+.printed-object-container {
+  height: 200px;
+  width: 800px;
+  position: absolute;
+  left: 0;
+  top: 400px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.layer {
+  height: 8px;
+  width: 120px;
+  background-color: rgb(255, 193, 122);
+  border-radius: 2px;
+}
